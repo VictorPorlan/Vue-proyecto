@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <Header selected="About"/>
     <h1>This is an about page</h1>
     <div class="container">
       <div class="row">
@@ -9,3 +10,13 @@
     </div>
   </div>
 </template>
+<script>
+import Header from '@/components/Header.vue'
+
+export default {
+  name: 'About',
+  components: {
+    Header
+  }
+}
+</script>

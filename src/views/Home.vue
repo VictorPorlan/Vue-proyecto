@@ -1,20 +1,25 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <Contents titol="Llista de la Classe"/>
+  <div class="home" >
+    <Header selected="Home"/>
+    <h1>home</h1>
   </div>
 </template>
 
 
 <script>
 // @ is an alias to /src
-import Contents from '@/components/Contents.vue'
+import Header from '@/components/Header.vue'
 
 export default {
   name: 'Home',
   components: {
-    Contents
+    Header
   }
 }
 </script>
 
+<style>
+  .home{
+    height: 100%;
+  }
+</style>
