@@ -12,6 +12,7 @@
 </template>
 
 <script>
+
 export default {
   name: "HeaderButton",
   props: {
@@ -27,36 +28,35 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
+
+@keyframes createBox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 .root {
   background-color: #2a2a2a;
   color: #ffffff;
   width: 100px;
-  height: 50px;
+  height:75px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 }
 .text {
   grid-row: 2;
+  font-family: "Barlow";
 }
 .selected {
+  animation: createBox .25s;
   background-color: #ffffff;
-  height: 5px;
-  width: 80%;
+  height: 3px;
+  width: 60%;
+  margin-bottom: 10px;
   grid-row: 3;
   align-self: flex-end;
   margin-left: auto;
