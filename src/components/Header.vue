@@ -2,7 +2,7 @@
   <div class="root">
     <div class="row head">
       <div class="col-sm imagen">
-        <img src="../assets/logo.png" style="margin-left: 50px;"/>
+        <img src="../assets/logo.png" style="margin-left: 50px;" class="logo"/>
       </div>
       <div class="col-sm">
         <div class="buttons">
@@ -46,9 +46,10 @@ export default {
 .buttons {
   display: flex;
   justify-content: center;
+  padding-left: 30px;
 }
 .root {
-  max-width: 100%;
+  width: 100%;
   background-color: #2a2a2a;
   height: 75px;
   margin: 0px;
@@ -60,4 +61,11 @@ export default {
 .head{
     width:100%
 }
+@media only screen and (max-width: 600px) {
+  .logo{
+    display: none;
+  }
+}
+
+
 </style>

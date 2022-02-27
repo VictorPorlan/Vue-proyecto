@@ -4,19 +4,23 @@
       {{ title }}
     </div>
     <div class="image">
-      <img src="../assets/Oficina.jpg" class="img-fluid rounded" />
+      <img
+        src="../assets/oficinista.jpg"
+        class="rounded mx-auto d-block"
+        style="width: 90%"
+      />
     </div>
     <div class="texto">
-        
-          <h2 class="subtitulo">Card title</h2>
-          <div class="parrafo">
-          <p >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          </div>
+      <h1 class="subtitulo">Bienvenido</h1>
+      <div class="parrafo">
+        <p>
+          En esta empresa apostamos por la comodidad y la eficiencia de nuestros
+          empleados, para conseguirlo, optamos por los diseños más modernos y
+          actualizados en nuestras instalaciones, máquinas perfectamente
+          preparadas para su uso y un ambiente de trabajo totalmente libre de
+          estrés y con gran apoyo de tus compañeros.
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -33,8 +37,7 @@ export default {
 .caja {
   background-color: white;
   border-radius: 20px;
-  height: 600px;
-  width: 50%;
+  width: 60%;
   margin-top: 50px;
   display: grid;
   grid-template-rows: 1fr 5fr;
@@ -57,17 +60,35 @@ export default {
   justify-content: center;
   display: grid;
   grid-template-rows: 1fr 4fr;
-  height:80%
+  height: 60%;
 }
-.subtitulo{
-    grid-row: 1;
-    align-self: center;
+.subtitulo {
+  grid-row: 1;
+  align-self: center;
 }
-.parrafo{
+.parrafo {
+  grid-row: 2;
+  justify-self: center;
+  align-self: center;
+  font-size: 20px;
+  width: 80%;
+}
+@media only screen and (max-width: 1200px) {
+  .caja {
+    width: 90%;
+    grid-template-rows: 1fr 3fr 5fr;
+    grid-template-columns: 1fr;
+  }
+  .texto {
+    grid-row: 3;
+    grid-column: 1;
+    align-self: flex-start;
+    justify-content: center;
+  }
+  .image {
     grid-row: 2;
-    align-self: center;
-    justify-self: center;
-    font-size: 20px;
-    width: 70%;
+    grid-column: 1;
+    margin-top: 20px;
+  }
 }
 </style>
